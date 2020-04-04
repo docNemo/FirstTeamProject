@@ -1,11 +1,12 @@
 package ru.mai;
 
 import ru.mai.cleaners.BlanksCleaner;
+import ru.mai.cleaners.DeleteTwins;
+import ru.mai.cleaners.UpperCaseCorrection;
 import ru.mai.cleaners.NumCleaner;
 import ru.mai.cleaners.SpecialCharsToSpaces;
 import ru.mai.cleaners.DeleteTwins;
 import ru.mai.cleaners.UpperCaseCorrection;
-
 import java.util.Scanner;
 
 public class Main {
