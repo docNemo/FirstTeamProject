@@ -3,6 +3,9 @@ package ru.mai;
 import ru.mai.cleaners.BlanksCleaner;
 import ru.mai.cleaners.SpecialCharsToSpaces;
 
+import ru.mai.cleaners.DeleteTwins;
+import ru.mai.cleaners.UpperCaseCorrection;
+
 import java.util.Scanner;
 
 public class Main {
@@ -13,6 +16,8 @@ public class Main {
 
         data = BlanksCleaner.cleanString(data);
         data = SpecialCharsToSpaces.specialCharsToSpaces(data);
+        data = DeleteTwins.deleteTwins(data);
+        data = UpperCaseCorrection.correction(data);
 
         System.out.println(data);
     }
