@@ -1,6 +1,8 @@
 package ru.mai;
 
 import ru.mai.cleaners.BlanksCleaner;
+import ru.mai.cleaners.LineCheck;
+import ru.mai.cleaners.*;
 import ru.mai.cleaners.DeleteTwins;
 import ru.mai.cleaners.UpperCaseCorrection;
 import java.util.Scanner;
@@ -12,8 +14,13 @@ public class Main {
         String data = scanner.nextLine();
 
         data = BlanksCleaner.cleanString(data);
+        data = LineCheck.delNonLatin(data);
+        data = NumCleaner.cleanNums(data);
+        data = SpecialCharsToSpaces.specialCharsToSpaces(data);
         data = DeleteTwins.deleteTwins(data);
         data = UpperCaseCorrection.correction(data);
-        System.out.println(data);
+        data = UpperCaseCleaner.cleanString(data);
+
+      System.out.println(data);
     }
 }
