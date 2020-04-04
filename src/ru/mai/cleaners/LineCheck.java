@@ -9,7 +9,7 @@ public class LineCheck {
         Matcher mat = pat.matcher(str);
         String resStr = "";
         while (mat.find()) {
-            resStr = resStr + mat.group(1);
+            resStr += mat.group(1);
         }
         return resStr;
     }
